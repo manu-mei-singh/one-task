@@ -23,17 +23,17 @@ ACTION="${2}"
 
 # getting commands together
 case "$COMMAND" in
-    setup)   echo "one" ;;
-    list)   echo "two" ;;
-    top) echo "three" ;;
-    add)  echo "four" ;;
-    delete)  echo "five" ;;
-    new)   echo "new" ;;
+    setup)   echo "Setup" ;;
+    list)   echo "List items" ;;
+    top) echo "Top item" ;;
+    add)  echo "Add item" ;;
+    delete)  echo "Delete item" ;;
+    new)   echo "New:list" ;;
     *)     
-    echo "Usage: $0 must contain one of the commands:"
+    echo "Usage: $0 must contain one of these commands:"
     echo "setup"
-    echo "List"
-    echo "Top"
+    echo "list"
+    echo "top"
     echo "New"
       ;;
 esac
