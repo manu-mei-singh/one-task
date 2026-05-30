@@ -10,17 +10,16 @@
 #   NewList
 
 # Usage: ./one_task <command> <action>
-# Month format: 01-12
-# Example: ./one_tash.sh NewList homework.md 
+# Example: ./one_tash.sh new homework.md 
 
 COMMAND="${1}"
 ACTION="${2}"
 
 
-if [[ -z "$ACTION"  ]]; then
- echo "Usage: $0 must not be an empty string"
- exit 1
-fi  
+# if [[ -z "$ACTION"  ]]; then
+#  echo "Usage: $0 must not be an empty string"
+#  exit 1
+# fi  
 
 # getting commands together
 case "$COMMAND" in
