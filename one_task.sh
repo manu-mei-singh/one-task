@@ -21,6 +21,49 @@ ACTION="${2}"
 #  exit 1
 # fi  
 
+
+
+function  SetupFile(){
+
+  if [[ "$1" == "setup" ]]; then
+    echo -e "\n"
+    echo "================================================" 
+    echo -e "\n"
+    echo "set up file ${2}"
+    touch "${2}.md"
+    echo "================================================" 
+fi
+}
+
+function ListFiles(){
+    if [[ "$1" == "list" ]]; then
+         echo -e "\n"
+        echo "================================================" 
+        echo -e "\n"
+        if ls *.list.md 2>/dev/null; then
+            echo -e "All todo-lists:"
+            ls *.list.md
+        else
+            echo "You have no todo-lists."
+        fi
+        echo -e "\n"
+        echo "================================================" 
+    fi
+}
+
+
+function New(){
+  if [[ "$1" == "new" ]]; then
+        echo -e "\n"
+        echo "================================================" 
+        echo -e "\n"
+        echo  "Create ${2}.md"
+        touch "$2"
+        echo "================================================" 
+    fi
+
+}
+
 # getting commands together
 case "$COMMAND" in
     setup)   echo "Setup" ;;
