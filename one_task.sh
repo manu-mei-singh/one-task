@@ -66,20 +66,29 @@ function New(){
 
 # getting commands together
 case "$COMMAND" in
-    setup)   echo "Setup" ;;
-    list)   echo "List items" ;;
+    setup)   SetupFile "$COMMAND" "$ACTION" ;;
+    list)    ListFiles "$COMMAND" ;;
     top) echo "Top item" ;;
     add)  echo "Add item" ;;
     delete)  echo "Delete item" ;;
     new)   echo "New:list" ;;
-    *)     
-    echo "Usage: $0 must contain one of these commands:"
+    help) echo "help" ;;
+    *)    
+    echo -e "\n"
+    echo " ===============================================" 
+    echo -e "\n"
+    echo -e "One task must take one of these commands:"
     echo "setup"
     echo "list"
     echo "top"
     echo "New"
+    echo -e "\n"
+    echo " ===============================================" 
+     echo -e "\n"
+
       ;;
 esac
+
 
 
 
